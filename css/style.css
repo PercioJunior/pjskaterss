@@ -1,0 +1,730 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* GERAL */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  /* CABEÇALHO */
+  header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ff4747;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 5px;
+  }
+  
+  /* LOGOS */
+  header img.logoUniube {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    height: 100px;
+    filter: brightness(0) invert(1);
+  }
+  
+  header img.logoSkate {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    height: 100px;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* MENU */
+  nav {
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #ff4747;
+  }
+  
+  /* CONTEÚDO */
+  main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  
+  .footer {
+    background: linear-gradient(-45deg, #111, #222, #1e1e1e, #111);
+    background-size: 400% 400%;
+    animation: backgroundMove 10s ease infinite;
+    padding: 20px 10px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  .footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .footer-text p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes backgroundMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes textGlow {
+    from {
+      text-shadow: 0 0 5px #ff4747, 0 0 10px #ff4747;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff4747;
+    }
+  }
+  .btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff4747;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff4747aa;
+    transition: all 0.3s ease;
+    z-index: 99;
+    border: 2px solid white;
+  }
+  
+  .btn-topo:hover {
+    background-color: #ffffff;
+    color: #ff4747;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffffff88;
+  }
+  .btn-topo:active {
+    transform: scale(0.9) rotate(-3deg);
+    box-shadow: 0 0 5px #ff4747;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* ESTILO PARA A PÁGINA DE LINKS */
+  main ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  main ul li {
+    background-color: #292929;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 1.6;
+  }
+  
+  main ul li:hover {
+    background-color: #383838;
+    transform: scale(1.02);
+  }
+  
+  .linkExterno {
+    color: #ff4747;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .linkExterno:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+ /* Imagens lado a lado só em telas grandes */
+@media (min-width: 768px) {
+    .flex-imagens {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: nowrap;
+    }
+  
+    .flex-imagens img {
+      width: 45%;
+      max-width: 400px;
+    }
+  }
+
+  img {
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Padrão moderno */
+    -webkit-tap-highlight-color: transparent; /* remove o azul no toque/click */
+  }
+
+  main p {
+    margin-bottom: 18px;  /* espaço entre os parágrafos */
+    line-height: 1.6;     /* altura das linhas */
+    text-align: justify;  /* texto justificado, fica mais bonito */
+  }
+
+  main h2 {
+    color: #ff4747;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Estilo para a Galeria de Fotos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .galeria img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000055;
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+ 
+  .titulo-galeria {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Modalidades */
+  .modalidades ol {
+    counter-reset: item; /* Resetando o contador para a lista ordenada */
+    color: #f0f0f0; /* Cor padrão para o texto da explicação (branco) */
+    list-style-type: decimal; /* Usando números como marcador */
+    padding-left: 0;
+    margin-left: 20px; /* Deixa a lista mais afastada da borda */
+}
+
+.modalidades ol li {
+    background-color: #292929; /* Cor de fundo para os itens */
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    line-height: 1.6;
+    border: 2px solid #444; /* Borda cinza */
+}
+
+.modalidades ol li:hover {
+    background-color: #383838; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.02);
+}
+
+/* Título da modalidade - em vermelho */
+.modalidades ol li .tituloModalidade {
+    color: #ff4747; /* Cor vermelha para o título da modalidade */
+    font-weight: bold;
+}
+
+/* Explicação da modalidade - em branco */
+.modalidades ol li .explicacaoModalidade {
+    color: #ffffff; /* Cor branca para a explicação */
+}
+
+/* Estilo para os links (caso use links nos itens da lista) */
+.modalidades ol li a {
+    color: #ff4747;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.modalidades ol li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+  .equipamentos ul {
+    list-style-type: disc; /* Garantir que os pontos apareçam */
+    padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+    color: #f0f0f0; /* Cor padrão para o texto da explicação (branco) */
+}
+
+.equipamentos ul li {
+    background-color: #292929; /* Cor de fundo para os itens */
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 1.6;
+    border: 2px solid #444; /* Borda cinza */
+}
+
+.equipamentos ul li:hover {
+    background-color: #383838; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.02);
+}
+
+/* Título do equipamento - em vermelho */
+.equipamentos ul li .tituloEquipamento {
+    color: #ff4747; /* Cor vermelha para o título do equipamento */
+    font-weight: bold;
+}
+
+/* Explicação do equipamento - em branco */
+.equipamentos ul li .explicacaoEquipamento {
+    color: #ffffff; /* Cor branca para a explicação */
+}
+
+/* Estilo para os links (caso use links nos itens da lista) */
+.equipamentos ul li a {
+    color: #ff4747;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.equipamentos ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Tabela de eventos */
+.eventos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .eventos-table th, .eventos-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #444;
+  }
+  
+  .eventos-table th {
+    background-color: #ff4747;
+    color: white;
+  }
+  
+  .eventos-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .eventos-table tr:hover {
+    background-color: #ddd;
+  }
+  
+
+  /* Estilo do formulário de contato */
+.form-contato {
+    background-color: #292929;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px #00000055;
+  }
+  
+  .form-contato label {
+    display: block;
+    color: #f0f0f0;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-contato input,
+  .form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .form-contato textarea {
+    resize: vertical;
+  }
+  
+  .form-contato button {
+    background-color: #ff4747;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .form-contato button:hover {
+    background-color: #ffffff;
+    color: #ff4747;
+    transform: scale(1.05);
+  }
+  
+  .form-contato button:active {
+    transform: scale(0.95);
+  }
+
+  .lista-manobras {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .lista-manobras li {
+    background-color: #292929;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .lista-manobras li:hover {
+    background-color: #383838;
+    transform: scale(1.02);
+  }
+
+  .titulo-pagina {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff4747;
+  }
+  
+  .lista-pistas {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .lista-pistas li {
+    background-color: #292929;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .lista-pistas li:hover {
+    background-color: #383838;
+    transform: scale(1.02);
+  }
+
+  .skatistas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skatista {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .skatista:hover {
+    transform: scale(1.02);
+  }
+  
+  .skatista img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .filtros {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .filtros input[type="radio"] {
+    display: none;
+  }
+  
+  .filtros label {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .filtros label:hover {
+    background-color: #ff4747;
+  }
+  
+  .filtros input[type="radio"]:checked + label {
+    background-color: #ff4747;
+  }
+  
+  /* Filtro de itens por categoria */
+  #roupas:checked ~ .vitrine .item:not(.roupas),
+  #acessorios:checked ~ .vitrine .item:not(.acessorios),
+  #tenis:checked ~ .vitrine .item:not(.tenis) {
+    display: none;
+  }
+  
+  .vitrine {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .vitrine .item {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .vitrine .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 71, 71, 0.5);
+  }
+  
+  .vitrine img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .vitrine h3 {
+    margin: 10px 0 5px;
+    color: #ff4747;
+  }
+  
+  .vitrine p {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  /* Seções da arte */
+main section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Imagens de arte */
+.arte-img {
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arte-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Título da página */
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #ff4747;
+}
+
+/* Subtítulos */
+main h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+body.arte-page main p {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+/* Título principal */
+body.arte-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Subtítulos */
+body.arte-page h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #ff4747;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Texto */
+body.arte-page .conteudo-arte p {
+  max-width: 850px;
+  margin: 10px auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #f1f1f1;
+}
+
+
+/* Seções */
+body.arte-page section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Imagens */
+.arte-img {
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.arte-img:hover {
+  transform: scale(1.05);
+}
+
+/* Rodapé adaptado */
+body.arte-page .footer {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ff4500;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 40px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h3 {
+  color: #ff4747;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
