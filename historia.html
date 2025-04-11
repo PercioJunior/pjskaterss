@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PJSkaterss - História</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="topo">
+  <header>
+    <img src="/imagens/uniubeLogo-removebg-preview.png" alt="Logo Uniube" class="logoUniube" />
+    <h1>PJSkaterss</h1>
+    <p><b>O mundo do skate na palma da sua mão</b></p>
+    <img src="/imagens/LogoSite-removebg-preview.png" alt="SiteLogo" class="logoSkate">
+  </header>
+  
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="historia.html">História</a>
+    <a href="moda.html">Moda</a>
+    <a href="modalidades.html">Modalidades</a>
+    <a href="manobras.html">Manobras</a>
+    <a href="equipamentos.html">Equipamentos</a>
+    <a href="pistas.html">Pistas</a>
+    <a href="arte.html">Arte</a>
+    <a href="skaters.html">Skatistas</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="fotos.html">Galeria</a>
+    <a href="links.html">Links</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  
+  <main>
+    <h2>História do Skate</h2>
+    <p>
+      O skate surgiu nos Estados Unidos, na Califórnia, por volta da década de 1950. Ele nasceu da criatividade dos surfistas, que queriam continuar praticando algo parecido com o surfe mesmo nos dias sem ondas. A ideia era simples: prender rodinhas em uma prancha de madeira e deslizar pelas ruas.
+    </p>
+    <p>
+      Os primeiros skates eram rudimentares, feitos com pedaços de madeira e rodas de patins. Com o tempo, o skate foi ganhando popularidade entre os jovens e começou a se desenvolver como esporte, com a criação de pistas e manobras específicas.
+    </p>
+    <p>
+      Na década de 1970, o skate viveu seu primeiro "boom". Com a invenção das rodas de poliuretano, ficou muito mais fácil e seguro andar de skate. Surgiram os primeiros campeonatos e skatistas profissionais. A cultura do skate começou a se espalhar pelo mundo.
+    </p>
+    <p>
+      Nos anos 80 e 90, o skate passou por altos e baixos, mas continuou evoluindo. Nessa época, surgiram grandes nomes, como Tony Hawk, que ajudaram a popularizar o esporte. A indústria cresceu com marcas, vídeos e revistas especializadas.
+    </p>
+    <p>
+      Em 2021, o skate estreou como modalidade olímpica nos Jogos de Tóquio, consagrando sua importância como esporte global. Hoje, o skate é muito mais do que um esporte — é um estilo de vida, uma forma de expressão e uma parte da cultura urbana.
+    </p>
+
+    <div class="flex-imagens">
+        <img src="imagens/TonyHawk.jpeg" alt="TonyHawk"/>
+        <img src="imagens/RayssaLeal2.jpg" alt="RayssaLeal2"/>
+      </div>
+
+      <section class="timeline">
+        <h2>📜 Linha do Tempo do Skate</h2>
+      
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>1950s</h3>
+            <p>O skate surgiu na Califórnia como alternativa ao surfe em dias sem ondas.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>1970s</h3>
+            <p>O esporte evoluiu com a criação de rodas de poliuretano e manobras em piscinas vazias.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>1980s</h3>
+            <p>Explosão do skate de rua e surgimento de grandes nomes como Tony Hawk.</p>
+          </div>
+        </div>
+      
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2020</h3>
+            <p>Skate estreia como esporte olímpico nos Jogos de Tóquio.</p>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-text">
+          <p>&copy; 2025 PJSkaterss</p>
+          <p>Desenvolvido por Percio Campos Da Silva Junior • RA: 5160914</p>
+        </div>
+      </div>
+    </footer>
+
+  <a href="#topo" class="btn-topo" title="Voltar ao topo">↑</a>
+
+  <script>
+    const items = document.querySelectorAll('.timeline-item');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    items.forEach(item => observer.observe(item));
+  </script>
+  
+</body>
+</html>
