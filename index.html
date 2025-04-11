@@ -4,115 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJSkaterss - Página Inicial</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #1e1e1e;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #ff4747;
-    }
-    header img.logoUniube{
-      position: absolute;
-      top: 24px;
-      right: 20px;
-      height: 100px;
-      filter: brightness(0) invert(1);  
-    }
-    header img.logoSkate{
-      position: absolute;
-      top: 15px;
-      right: 1770px;
-      height: 100px; 
-      filter: brightness(0) invert(1); 
-    }
-    nav {
-      background-color: #333;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 10px;
-      padding: 8px 16px;
-      background-color: #444;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #ff4747;
-    }
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-  background: linear-gradient(90deg, #111, #222);
-  color: #ccc;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer-content {
-  animation: fadeInUp 1.2s ease;
-}
-
-footer p {
-  margin: 6px 0;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 71, 71, 0.2),
-    transparent
-  );
-  animation: shine 4s infinite;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shine {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -125,15 +17,17 @@ footer::before {
   <nav>
     <a href="index.html">Início</a>
     <a href="historia.html">História</a>
+    <a href="moda.html">Moda</a>
     <a href="modalidades.html">Modalidades</a>
     <a href="manobras.html">Manobras</a>
     <a href="equipamentos.html">Equipamentos</a>
     <a href="pistas.html">Pistas</a>
+    <a href="arte.html">Arte</a>
     <a href="skaters.html">Skatistas</a>
     <a href="eventos.html">Eventos</a>
     <a href="fotos.html">Galeria</a>
-    <a href="contato.html">Contato</a>
     <a href="links.html">Links</a>
+    <a href="contato.html">Contato</a>
   </nav>
 
   <main>
@@ -158,19 +52,22 @@ footer::before {
           <a href="historia.html" style="color: #ff4747;">Ver mais...</a>
         </div>
         <div style="background-color: #292929; padding: 20px; border-radius: 10px; width: 240px;">
-          <h3 style="color: #ff4747;">Modalidades</h3>
-          <p>Conheça as diferentes formas de andar de skate: street, freestyle...</p>
-          <a href="modalidades.html" style="color: #ff4747;">Ver mais...</a>
+          <h3 style="color: #ff4747;">Moda e Estilo</h3>
+          <p>Conheça os estilos dos skaters e crie seu outfit.</p>
+          <a href="moda.html" style="color: #ff4747;">Ver mais...</a>
         </div>
       </div>
   
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2025 PJSkaterss • Desenvolvido por Percio Campos Da Silva Junior</p>
-        <p>RA: 5160914</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-text">
+          <p>&copy; 2025 PJSkaterss</p>
+          <p>Desenvolvido por Percio Campos Da Silva Junior • RA: 5160914</p>
+        </div>
       </div>
     </footer>
+  <a href="#" class="btn-topo" title="Voltar ao topo">↑</a>
 </body>
 </html>
